@@ -1,12 +1,14 @@
 package com.project.zopa;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 import com.project.zopa.exception.QuoteException;
 import com.project.zopa.model.Lender;
 import com.project.zopa.model.QuoteConstants;
 import com.project.zopa.model.QuoteResult;
+import com.project.zopa.service.QuoteService;
 import com.project.zopa.utils.FileUtils;
 import com.project.zopa.utils.QuoteUtils;
 
@@ -16,7 +18,7 @@ import com.project.zopa.utils.QuoteUtils;
  */
 public class QuoteApplication  {
 
-	public static void main(String[] args) throws QuoteException {
+	public static void main(String[] args) throws QuoteException, FileNotFoundException {
 
 
 		if (args.length > 0) {
@@ -29,7 +31,7 @@ public class QuoteApplication  {
 				result.setRequestedAmount(QuoteUtils.getLoanAmountInput(args[1]));
 				
 				// Calculation of the rate and monthly repayment
-				result = QuoteUtils.obtainQuoteRateAndRepayment(lendersList, result);
+				result = QuoteService.obtainQuoteRateAndRepayment(lendersList, result);
 
 				// Calling the method that prints out the result
 				QuoteUtils.printExitStatus(result);

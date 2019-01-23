@@ -1,9 +1,6 @@
 package com.project.zopa.utils;
 
-import java.util.List;
-
 import com.project.zopa.exception.QuoteException;
-import com.project.zopa.model.Lender;
 import com.project.zopa.model.QuoteConstants;
 import com.project.zopa.model.QuoteResult;
 
@@ -33,13 +30,6 @@ public class QuoteUtils {
 		} else {
 			return convertedLoanAmount;
 		}
-	}
-	
-	public static QuoteResult obtainQuoteRateAndRepayment(final List<Lender> lendersList, QuoteResult result) {
-		
-		
-		
-		return result;
-	}
+	}	
 
 }

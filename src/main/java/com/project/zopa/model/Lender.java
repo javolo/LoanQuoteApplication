@@ -1,9 +1,11 @@
 package com.project.zopa.model;
 
+import java.math.BigDecimal;
+
 public class Lender {
 	
 	private String lenderName;
-	private double interestRate;
+	private BigDecimal interestRate;
 	private int availableAmount;
 	
 	/**
@@ -23,14 +25,14 @@ public class Lender {
 	/**
 	 * @return the interestRate
 	 */
-	public double getInterestRate() {
+	public BigDecimal getInterestRate() {
 		return interestRate;
 	}
 	
 	/**
 	 * @param interestRate the interestRate to set
 	 */
-	public void setInterestRate(double interestRate) {
+	public void setInterestRate(BigDecimal interestRate) {
 		this.interestRate = interestRate;
 	}
 	

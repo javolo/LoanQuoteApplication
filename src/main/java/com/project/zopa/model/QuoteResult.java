@@ -1,11 +1,13 @@
 package com.project.zopa.model;
 
+import java.math.BigDecimal;
+
 public class QuoteResult {
 	
 	private int requestedAmount;
-	private float percentageRate;
-	private double monthlyRepayment;
-	private double totalRepayment;
+	private BigDecimal percentageRate;
+	private BigDecimal monthlyRepayment;
+	private BigDecimal totalRepayment;
 	
 	/**
 	 * @return the requestedAmount
@@ -24,42 +26,42 @@ public class QuoteResult {
 	/**
 	 * @return the percentageRate
 	 */
-	public float getPercentageRate() {
+	public BigDecimal getPercentageRate() {
 		return percentageRate;
 	}
 	
 	/**
 	 * @param percentageRate the percentageRate to set
 	 */
-	public void setPercentageRate(float percentageRate) {
+	public void setPercentageRate(BigDecimal percentageRate) {
 		this.percentageRate = percentageRate;
 	}
 	
 	/**
 	 * @return the monthlyRepayment
 	 */
-	public double getMonthlyRepayment() {
+	public BigDecimal getMonthlyRepayment() {
 		return monthlyRepayment;
 	}
 	
 	/**
 	 * @param monthlyRepayment the monthlyRepayment to set
 	 */
-	public void setMonthlyRepayment(double monthlyRepayment) {
+	public void setMonthlyRepayment(BigDecimal monthlyRepayment) {
 		this.monthlyRepayment = monthlyRepayment;
 	}
 	
 	/**
 	 * @return the totalRepayment
 	 */
-	public double getTotalRepayment() {
+	public BigDecimal getTotalRepayment() {
 		return totalRepayment;
 	}
 	
 	/**
 	 * @param totalRepayment the totalRepayment to set
 	 */
-	public void setTotalRepayment(double totalRepayment) {
+	public void setTotalRepayment(BigDecimal totalRepayment) {
 		this.totalRepayment = totalRepayment;
 	}
 }
