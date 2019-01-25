@@ -9,6 +9,18 @@ public class Lender {
 	private int availableAmount;
 	
 	/**
+	 * Constructor
+	 * @param lenderNameIn
+	 * @param interestRateIn
+	 * @param avaiableAmountIn
+	 */
+	public Lender (final String lenderNameIn, final BigDecimal interestRateIn, final int avaiableAmountIn) {
+		this.lenderName = lenderNameIn;
+		this.interestRate = interestRateIn;
+		this.availableAmount = avaiableAmountIn;
+	}
+	
+	/**
 	 * @return the lenderName
 	 */
 	public String getLenderName() {

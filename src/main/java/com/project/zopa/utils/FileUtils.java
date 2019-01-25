@@ -26,7 +26,7 @@ public class FileUtils {
 			Scanner scanner = new Scanner(inputFile);
 			
 			// Variables used in the scan
-			String line;
+			String line = scanner.nextLine();;
 			String[] fields;
 			Lender lender;
 			
@@ -37,12 +37,7 @@ public class FileUtils {
 				
 				// At least one address specified.
 				if (fields.length == 3) {
-					lender = new Lender();
-					for (String field: fields) {
-						lender.setLenderName(field);
-						lender.setInterestRate(new BigDecimal(field));
-						lender.setAvailableAmount(Integer.parseInt(field));
-					}
+					lender = new Lender(fields[0], new BigDecimal(fields[1]), Integer.parseInt(fields[2]));
 					result.add(lender);
 				} else {
 					scanner.close();
